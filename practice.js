@@ -250,3 +250,63 @@
 // }
 
 
+// my solution
+// let arr = [5, 3, 8, 1];
+
+// function filterRange(arr, a, b) {
+//   return arr
+//     .filter((num) => num >= a)
+//     .filter((num) => num <= b);
+// }
+
+// let filtered = filterRange(arr, 1, 4);
+
+// alert(filtered);
+// alert(arr);
+
+
+//book solution
+// function filterRange(arr, a, b) {
+//   // added brackets around the expression for better readability
+//   return arr.filter(item => (a <= item && item <= b));
+// }
+
+// let arr = [5, 3, 8, 1];
+
+// let filtered = filterRange(arr, 1, 4);
+
+// alert( filtered ); // 3,1 (matching values)
+
+// alert( arr ); // 5,3,8,1 (not modified)
+
+
+// my solution
+// it looks like it satisfies the assignment but will not pass the sandbox's first test
+// let arr = [5, 3, 8, 1];
+
+// function that removes elements between a and b 
+// function filterRangeInPlace(array, a, b) {
+//   if (a < b) {
+//     arr = array.filter((num) => num >= a && num <= b);
+//   } else {
+//     arr = array.filter((num) => num >= b && num <= a);
+//   }
+// }
+
+// filterRangeInPlace(arr, 4, 1);
+// console.log(arr);
+// alert(arr);
+
+// book solution passes the sandbox test
+// function filterRangeInPlace(arr, a, b) {
+
+//   for (let i = 0; i < arr.length; i++) {
+//     let val = arr[i];
+
+//     // remove if outside of the interval
+//     if (val < a || val > b) {
+//       arr.splice(i, 1);
+//       i--;
+//     }
+//   }
+// }
