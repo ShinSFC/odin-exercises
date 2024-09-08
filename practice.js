@@ -403,18 +403,69 @@
 // alert(arr[2].name);
 
 // Shuffle an array
+// my solution // doesn't work completely. 1st element can only be 1 or 3, 2nd element can only be 2 or 3, 3rd element can be 1, 2 or 3
+//let arr = [1, 2, 3];
 
-let arr = [1, 2, 3];
+// function shuffle(arr) {
+//     let currentIndex = arr.length;
+//     while (currentIndex != 0) {
+//         let randomIndex = Math.floor(Math.random() * currentIndex);
+//         console.log(randomIndex);
+//         currentIndex--;
+//         [arr[currentIndex], arr[randomIndex]] = [
+//             arr[randomIndex], arr[currentIndex]];
+//         return arr;
+//     }
+// }
 
-function randomNumber(max) {
-    return Math.floor(Math.random() * max);
-}
+// book solution:
+// function shuffle(array) {
+//   for (let i = array.length - 1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * (i + 1));
+//     [array[i], array[j]] = [array[j], array[i]];
+//   }
+// }
 
-function shuffle(arr) {
-    randomNumber(array.length);
-    arr.map
-}
 
-shuffle(arr);
-shuffle(arr);
-shuffle(arr);
+// shuffle(arr);
+// console.log(arr);
+
+// Get average age
+// my solution
+// input
+// - array of objects
+// output
+// - single number which is the average of age property
+// examples
+// data structures
+// - values inside objects
+// - array
+// - numbers
+// algorithm
+// - loop and:
+//  - access age values
+//  - add up all age values/ divide by number of elements
+// - return average age
+
+
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 29 };
+
+// let arr = [ john, pete, mary ];
+
+// function getAverageAge(arr) {
+//     let ageTotal = 0;
+//     for ( user of arr ) {
+//         ageTotal += user.age;
+//     }
+//     return ageTotal / arr.length;
+// }
+
+// console.log(getAverageAge(arr));
+// alert( getAverageAge(arr) );
+
+// book solution
+// function getAverageAge(users) {
+//   return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+// }
