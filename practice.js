@@ -250,7 +250,7 @@
 // }
 
 
-// my solution
+// my solution for filter range
 // let arr = [5, 3, 8, 1];
 
 // function filterRange(arr, a, b) {
@@ -280,7 +280,7 @@
 // alert( arr ); // 5,3,8,1 (not modified)
 
 
-// my solution
+// my solution for filter range in place
 // it looks like it satisfies the assignment but will not pass the sandbox's first test
 // let arr = [5, 3, 8, 1];
 
@@ -310,3 +310,111 @@
 //     }
 //   }
 // }
+
+// my solution for sort in decreasing order
+// let arr = [5, 2, 1, -10, 8];
+
+// arr.sort((a, b) => a - b);
+// arr.reverse()  
+
+// alert(arr)
+
+// book solution
+// arr.sort((a, b) => b - a);
+
+// Copy and sort array
+// my solution
+
+// let arr = ["HTML", "JavaScript", "CSS"];
+
+// function copySorted(arr) {
+//     let copy = arr.filter(word => word);
+//     copy.sort();
+//     return copy;
+// }
+
+// let sorted = copySorted(arr);  
+
+// alert(sorted);
+// alert(arr);
+
+// book solution
+// function copySorted(arr) {
+//   return arr.slice().sort(); // uses slice() to make a copy
+// }
+
+// Map to names
+// my solution
+// let john = {name: "John", age: 25};
+// let pete = {name: "Pete", age: 30};
+// let mary = {name: "Mary", age: 28};
+
+// let users = [john, pete, mary];
+// console.log(users[1].name);
+
+// let names = [users[0].name, users[1].name, users[2].name];
+
+// alert(names);
+
+// book solution
+// let names = users.map(item => item.name);
+
+// Map to objects
+// my solution
+// let john = { name: "John", surname: "Smith", id: 1 };
+// let pete = { name: "Pete", surname: "Hunt", id: 2 };
+// let mary = { name: "Mary", surname: "Key", id: 3 };
+
+// let users = [john, pete, mary];
+
+// let usersMapped = users.map(item => {
+//     return {
+//     fullName: item.name + ' ' + item.surname,
+//     id: item.id
+//     }});
+
+// console.log(usersMapped);
+// alert(usersMapped[0].id);
+// alert(usersMapped[0].fullName);
+
+// book solution
+// let usersMapped = users.map(user => {
+//   fullName: `${user.name} ${user.surname}`,
+//   id: user.id
+// });
+
+// Sort users by age
+
+// my solution also book solution is identical
+// let john = { name: "John", age: 25 };
+// let pete = { name: "Pete", age: 30 };
+// let mary = { name: "Mary", age: 28 };
+
+// let arr = [ pete, john, mary ];
+
+// let sortByAge = function(arr) {
+//     arr.sort((a, b) => a.age - b.age);
+// }
+
+// sortByAge(arr);
+
+// alert(arr[0].name);
+// alert(arr[1].name);
+// alert(arr[2].name);
+
+// Shuffle an array
+
+let arr = [1, 2, 3];
+
+function randomNumber(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function shuffle(arr) {
+    randomNumber(array.length);
+    arr.map
+}
+
+shuffle(arr);
+shuffle(arr);
+shuffle(arr);
