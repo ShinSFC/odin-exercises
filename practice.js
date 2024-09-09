@@ -469,3 +469,60 @@
 // function getAverageAge(users) {
 //   return users.reduce((prev, user) => prev + user.age, 0) / users.length;
 // }
+
+// Filter unique array numbers
+// input
+// - array of strings
+// output
+// - array where each element is unique 
+// data structures
+// - array of strings
+// - strings
+// algorithm
+// - function that takes an array as an argument
+// - iterates through the array and 
+// - returns an array where each element is unique
+// - or deletes any repeats
+// - if else statement?
+
+// function unique(arr) {
+//     return [...new Set(arr)];  // advanced way. can also use includes()
+// }
+
+// let strings = [ "Hare", "Krishna", "Hare", "Krishna",
+//     "Krishna", "Krishna", "Hare", "Hare", ":-0"
+// ];
+
+// alert( unique(strings) );
+
+
+// Create keyed object from array
+// my solution
+// input
+// - array
+// output
+// - object
+// data structures
+// - array
+// - object
+// algorithm
+// - iterate through array
+// - accumulate elements into a single object
+
+let users = [
+    { id: 'john', name: "John Smith", age: 20 },
+    { id: 'ann' , name: "Ann Smith", age: 24 },
+    { id: 'pete', name: "Pete Peterson", age: 31 },
+];
+
+function groupById(arr) {
+    let obj = {};
+    arr.reduce((accumulator, element) => {
+        accumulator[element.id] = element;
+        return accumulator;
+    }, obj);
+    return obj;
+}
+
+let usersById = groupById(users);
+console.log(usersById);
