@@ -509,20 +509,48 @@
 // - iterate through array
 // - accumulate elements into a single object
 
-let users = [
-    { id: 'john', name: "John Smith", age: 20 },
-    { id: 'ann' , name: "Ann Smith", age: 24 },
-    { id: 'pete', name: "Pete Peterson", age: 31 },
-];
+// let users = [
+//     { id: 'john', name: "John Smith", age: 20 },
+//     { id: 'ann' , name: "Ann Smith", age: 24 },
+//     { id: 'pete', name: "Pete Peterson", age: 31 },
+// ];
 
-function groupById(arr) {
-    let obj = {};
-    arr.reduce((accumulator, element) => {
-        accumulator[element.id] = element;
-        return accumulator;
-    }, obj);
-    return obj;
-}
+// function groupById(arr) {
+//     let obj = {};
+//     arr.reduce((accumulator, element) => {
+//         accumulator[element.id] = element;
+//         return accumulator;
+//     }, obj);
+//     return obj;
+// }
 
-let usersById = groupById(users);
-console.log(usersById);
+// let usersById = groupById(users);
+// console.log(usersById);
+
+// POWER function
+
+// const power = function(num1, num2) {
+//     let result = 1;
+//     for ( let i = num2; i > 0; i--) {
+//     console.log(i);
+//     result *= num1;
+//     }
+//     console.log(result)
+// }
+
+// power(4, 2)
+
+//FACTORIAL function
+
+// const factorial = function(num) {
+//     if (num == 0) return 1;
+//     let result = 1;
+//     for (let i = num; i > 0; i--) {
+//         console.log(i);
+//         result *= i;
+//     }
+//     return result;
+// };
+
+// factorial(3)
+
